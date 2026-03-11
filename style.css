@@ -1,0 +1,422 @@
+/* ==========================================================================
+   1. CORE VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --primary: #3b82f6; /* Modern Blue */
+    --accent: #10b981;  /* Trading Green */
+    --bg: #0b0f1a;
+    --text: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Sophisticated Background Gradient */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+    z-index: -1;
+}
+/* ==========================================================================
+   2. REFINED MINIMALIST NAVIGATION (The "Cool" Version)
+   ========================================================================== */
+.glass-nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 8%; 
+    background: rgba(11, 15, 26, 0.8);
+    backdrop-filter: blur(20px); 
+    border-bottom: 1px solid var(--border);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+/* Update these in your style.css */
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.brand-logo {
+    /* Increase height from 40px to 60px or 70px */
+    height: 65px; 
+    width: auto;
+    display: block;
+    object-fit: contain;
+    /* This ensures no hidden black backgrounds from the browser */
+    background: transparent !important; 
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+.nav-menu {
+    display: flex;
+    gap: 40px; /* Increased spacing for that organized feel */
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.2px; /* Professional author spacing */
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 0;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text);
+}
+
+/* The Cool Active Indicator */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link.active {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    width: 20px; /* Small, sharp indicator instead of a big button */
+}
+
+/* ==========================================================================
+   UPDATED RESPONSIVE NAV (Mobile Fix)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .glass-nav {
+        padding: 15px 5%;
+    }
+    .nav-menu {
+        gap: 20px;
+    }
+    .nav-link {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+}
+/* ==========================================================================
+   3. HERO & GLOBAL COMPONENTS
+   ========================================================================== */
+.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-content { max-width: 800px; padding: 0 20px; }
+
+.badge { 
+    background: rgba(59, 130, 246, 0.1); color: var(--primary);
+    padding: 8px 16px; border-radius: 20px; font-size: 0.8rem;
+    display: inline-block; margin-bottom: 20px; font-weight: 600;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
+.gradient-text { background: linear-gradient(90deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.hero-btns { display: flex; gap: 15px; justify-content: center; margin-top: 30px; }
+button { padding: 14px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s; border: none; }
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+.btn-secondary { background: var(--glass); color: white; border: 1px solid var(--border); }
+
+/* Container & Header Basics */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.subpage .container { padding: 60px 5%; }
+.page-header { text-align: center; margin-bottom: 50px; }
+
+/* ==========================================================================
+   4. SERVICES SECTION
+   ========================================================================== */
+.services .container { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; padding: 0 8% 100px; 
+}
+
+.service-card {
+    background: var(--glass); border: 1px solid var(--border);
+    padding: 40px; border-radius: 16px; cursor: pointer; transition: 0.3s;
+}
+
+.service-card:hover { 
+    background: rgba(255, 255, 255, 0.05); 
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.icon { font-size: 2.5rem; margin-bottom: 20px; }
+.learn-more { color: var(--primary); font-size: 0.9rem; margin-top: 15px; display: block; }
+
+/* ==========================================================================
+   5. TRADING SECTION
+   ========================================================================== */
+.trading-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.chart-card, .strategy-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.status-dot {
+    height: 10px; width: 10px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.strategy-list { list-style: none; margin: 25px 0; }
+.strategy-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 15px;
+}
+
+.strategy-list li span { color: var(--primary); font-weight: 800; font-size: 0.8rem; }
+
+/* ==========================================================================
+   6. ABOUT SECTION (Timeline, Skills, Info)
+   ========================================================================== */
+.about-hero { text-align: center; max-width: 900px; margin: 0 auto 60px; }
+.lead { font-size: 1.2rem; color: #94a3b8; margin-top: 20px; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+
+.info-card {
+    background: var(--glass); border: 1px solid var(--border);
+    padding: 40px; border-radius: 20px; backdrop-filter: blur(10px);
+}
+
+.timeline-item {
+    margin-bottom: 30px; padding-left: 20px;
+    border-left: 2px solid var(--primary); position: relative;
+}
+
+.year { display: block; color: var(--primary); font-weight: 800; font-size: 0.9rem; margin-bottom: 5px; }
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; }
+.tag {
+    background: rgba(59, 130, 246, 0.1); color: var(--primary);
+    padding: 6px 14px; border-radius: 50px; font-size: 0.85rem;
+    font-weight: 600; border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* ==========================================================================
+   7. PROJECTS SECTION (Detailed Cards & 3D Book)
+   ========================================================================== */
+.projects-container { display: flex; flex-direction: column; gap: 80px; margin-top: 50px; }
+
+.project-detailed-card {
+    display: flex; align-items: center; gap: 50px;
+    background: var(--glass); border: 1px solid var(--border);
+    border-radius: 24px; padding: 50px; overflow: hidden;
+}
+
+.project-detailed-card.reversed { flex-direction: row-reverse; }
+.project-info { flex: 1; }
+.category { color: var(--primary); text-transform: uppercase; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; display: block; margin-bottom: 10px; }
+
+.tech-stack { display: flex; gap: 10px; margin: 20px 0; }
+.tech-stack span { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; border: 1px solid var(--border); }
+
+/* Visual Elements & Charts */
+.project-visual {
+    flex: 1; background: #000; border-radius: 12px; padding: 20px;
+    border: 1px solid var(--border); font-family: 'Courier New', monospace; color: var(--accent);
+}
+
+.code-snippet pre { font-size: 0.9rem; color: #10b981; }
+
+.chart-preview { display: flex; align-items: flex-end; gap: 10px; height: 150px; justify-content: center; }
+.bar { width: 20px; border-radius: 3px; }
+.bar.green { background: var(--accent); }
+.bar.red { background: #ef4444; }
+
+/* 3D Book Mockup */
+.book-mockup { position: relative; width: 200px; height: 300px; perspective: 1000px; margin: 0 auto; }
+.main-cover {
+    width: 100%; height: 100%; border-radius: 4px 10px 10px 4px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+    transform: rotateY(-20deg); transition: transform 0.5s ease; object-fit: cover;
+}
+.book-mockup:hover .main-cover { transform: rotateY(-5deg); }
+.book-spine {
+    position: absolute; width: 30px; height: 100%; background: #1a1a1a;
+    left: 0; transform: rotateY(-90deg) translateZ(15px); border-radius: 2px;
+}
+
+/* ==========================================================================
+   8. CONTACT & SOCIAL ECOSYSTEM
+   ========================================================================== */
+.contact-wrapper { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; margin-top: 50px; }
+.contact-info h1 { font-size: 3rem; margin-bottom: 20px; }
+
+.info-details { margin-top: 40px; display: flex; flex-direction: column; gap: 30px; }
+.info-item { display: flex; gap: 20px; align-items: center; }
+.info-item .icon {
+    font-size: 1.5rem; background: var(--glass); padding: 15px;
+    border-radius: 12px; border: 1px solid var(--border);
+}
+
+/* Forms */
+.contact-card { background: var(--glass); border: 1px solid var(--border); padding: 40px; border-radius: 24px; backdrop-filter: blur(20px); }
+.input-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+.input-group label { font-size: 0.85rem; font-weight: 600; color: #94a3b8; }
+
+input, select, textarea {
+    background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border);
+    padding: 14px; border-radius: 8px; color: white; transition: 0.3s;
+}
+input:focus, textarea:focus { outline: none; border-color: var(--primary); background: rgba(255, 255, 255, 0.07); }
+
+/* Social Links & Grid */
+.communication-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+.info-item-link {
+    display: flex; gap: 15px; align-items: center; text-decoration: none;
+    background: var(--glass); padding: 15px; border-radius: 12px; border: 1px solid var(--border); transition: 0.3s;
+}
+.info-item-link:hover { border-color: var(--primary); background: rgba(59, 130, 246, 0.08); transform: translateY(-3px); }
+
+.social-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.social-tag {
+    text-decoration: none; color: white; background: var(--glass); border: 1px solid var(--border);
+    padding: 8px 18px; border-radius: 50px; font-size: 0.85rem; transition: 0.3s;
+}
+.social-tag:hover { background: var(--primary); box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+
+.social-links { display: flex; justify-content: center; gap: 25px; margin-top: 20px; flex-wrap: wrap; }
+.social-icon { font-size: 1.6rem; color: var(--primary); transition: 0.3s; }
+.social-icon:hover { color: #fff; transform: translateY(-3px); }
+
+/* ==========================================================================
+   9. FOOTER & TICKER
+   ========================================================================== */
+footer { padding: 40px 8%; border-top: 1px solid var(--border); margin-top: 60px; background: rgba(11, 15, 26, 0.5); }
+.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+
+.system-status { display: flex; align-items: center; gap: 10px; font-family: monospace; font-size: 0.75rem; color: #64748b; }
+.status-indicator {
+    width: 8px; height: 8px; background: var(--accent); border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent); animation: blink 1.5s infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+.ticker-wrap {
+    width: 100%; overflow: hidden; background: rgba(11, 15, 26, 0.8);
+    border-bottom: 1px solid var(--border); backdrop-filter: blur(10px);
+    position: sticky; top: 75px; z-index: 99;
+}
+.tradingview-widget-container { height: 46px !important; }
+
+/* ==========================================================================
+   10. CONSOLIDATED RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+@media (max-width: 950px) {
+    .contact-wrapper { grid-template-columns: 1fr; gap: 50px; }
+}
+
+@media (max-width: 900px) {
+    .trading-grid { grid-template-columns: 1fr; }
+    .project-detailed-card, .project-detailed-card.reversed { flex-direction: column; padding: 30px; }
+    h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 800px) {
+    .about-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .glass-nav { flex-direction: column; padding: 15px 10px; gap: 15px; }
+    .nav-menu { flex-wrap: wrap; justify-content: center; gap: 8px; width: 100%; }
+    .nav-btn { flex-grow: 1; text-align: center; font-size: 0.75rem; padding: 10px 14px; }
+    .about-hero-flex { flex-direction: column; text-align: center; }
+    .about-photo-container { max-width: 250px; margin: 0 auto; }
+}
+
+@media (max-width: 600px) {
+    .communication-grid { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; text-align: center; }
+}
+/* Mature Professional Logo */
+.logo-signature {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 4px; /* Increased spacing for a high-end look */
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(180deg, #FFFFFF 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-signature::after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary); /* Your brand blue */
+    transition: width 0.4s ease;
+}
+
+.logo:hover .logo-signature {
+    letter-spacing: 6px; /* Subtle expansion effect on hover */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+}
+
+.logo:hover .logo-signature::after {
+    width: 100%; /* Underline grows on hover */
+}

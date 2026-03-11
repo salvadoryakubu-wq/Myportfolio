@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Salvador Yakubu</title>
+    
+    <meta name="title" content="Salvador Yakubu | Projects">
+    <meta name="description" content="A collection of AI prototypes, security tools, and automated trading algorithms.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+
+<nav class="glass-nav">
+    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+        <span class="logo-signature">SALVADOR YAKUBU</span>
+    </div> 
+    
+    <div class="nav-container">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link active">Projects</a></li> 
+            <li><a href="trading.html" class="nav-link">Trading</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <header class="page-header">
+        <div class="badge">Development & Security</div>
+        <h1 style="font-size: 3.5rem;">Technical <span class="gradient-text">Deployments</span></h1>
+        <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">A collection of AI prototypes, security tools, and automated trading algorithms engineered for performance.</p>
+    </header>
+
+    <div class="projects-container">
+    
+        <section class="deployment-box" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: 24px; padding: 40px; margin-bottom: 80px; backdrop-filter: blur(10px);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <span class="category" style="color: var(--primary); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">CORE_ASSET // AI_ENGINE</span>
+                    <h2 style="font-size: 2.2rem; margin: 10px 0;">Salvador AI Prototype <span class="gradient-text">v3.0</span></h2>
+                    <p style="color: #cbd5e1; margin-bottom: 25px; line-height: 1.6;">Standalone terminal environment featuring secure memory handling and task execution logic. Engineered in Python for low-latency terminal interaction.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 30px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">
+                        <div style="color: #64748b;">[OS]: Win_x64</div>
+                        <div style="color: #64748b;">[VER]: 3.0.4_STABLE</div>
+                        <div style="color: #64748b;">[LANG]: Python 3.11</div>
+                        <div style="color: #10b981; font-weight: 700;">[STATUS]: Deployment Ready</div>
+                    </div>
+
+                    <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 15px; border-radius: 4px; margin-bottom: 30px;">
+                        <span style="color: #f59e0b; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px;">SYSTEM_ACCESS_KEY</span>
+                        <p style="margin: 5px 0 0; font-family: 'JetBrains Mono', monospace; color: #fff; font-size: 1.1rem; letter-spacing: 2px;">89805554</p>
+                    </div>
+
+                    <div style="display: flex; gap: 15px;">
+                        <a href="downloads/salvador-ai-v3.zip" download class="btn-primary" style="flex: 2; text-align: center; text-decoration: none;">Download Binary (.EXE)</a>
+                        <button class="btn-secondary" style="flex: 1;">Documentation</button>
+                    </div>
+                </div>
+
+                <div class="terminal-mockup" style="flex: 1; min-width: 300px; background: #000; border-radius: 12px; border: 1px solid #334155; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                    <div style="display: flex; gap: 6px; margin-bottom: 15px;">
+                        <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56;"></span>
+                        <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></span>
+                        <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></span>
+                    </div>
+                    <div style="color: #10b981;">$ python3 salvador_ai.py</div>
+                    <div style="color: #fff;">[SYSTEM] Initializing secure protocols...</div>
+                    <div style="color: #fff;">[SYSTEM] Please enter access key:</div>
+                    <div style="color: #3b82f6;">********</div>
+                    <div style="color: #10b981;">[SUCCESS] Access Granted. Welcome, Salvador.</div>
+                    <div style="color: #64748b; margin-top: 10px;">> Running core_diagnostics... OK</div>
+                    <div style="color: #64748b;">> Scanning market_liquidity... OK</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="project-detailed-card reversed">
+            <div class="project-info">
+                <span class="category">Financial Engineering</span>
+                <h2>SMC Liquidity Tracker</h2>
+                <p>Proprietary algorithm identifying Market Structure Shifts (MSS) and Fair Value Gaps (FVG) specifically for XAUUSD and BTCUSD liquidity analysis.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Market API</span>
+                </div>
+                <button class="btn-secondary" onclick="window.location.href='trading.html'">View Chart Strategy</button>
+            </div>
+            <div class="project-visual">
+                <div class="chart-preview-container">
+                    <div class="candle bull" style="height: 70%;"></div>
+                    <div class="candle bear" style="height: 50%;"></div>
+                    <div class="candle bear" style="height: 90%;"></div>
+                    <div class="candle bull" style="height: 60%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-detailed-card">
+            <div class="project-info">
+                <span class="category">Author & Educator</span>
+                <h2>Understanding Forex Trading</h2>
+                <p>Published in 2025, this comprehensive guide bridges the gap between retail trading psychology and institutional Smart Money Concepts.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Publication</span>
+                    <span class="tech-tag">Forex Strategy</span>
+                    <span class="tech-tag">SMC</span>
+                </div>
+                <button class="btn-primary" onclick="window.open('https://selar.com/0017zf0a42', '_blank')">Purchase on Selar</button>
+            </div>
+            <div class="project-visual mockup-bg">
+                <div class="book-container">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <div style="padding: 20px; color: #fff; font-weight: 800; font-size: 0.8rem; text-align: center;">UNDERSTANDING FOREX TRADING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Salvador Yakubu. All rights reserved.</p>
+        <div class="system-status">
+            <span class="status-indicator"></span>
+            <span class="status-text" style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;">SYSTEM_OPERATIONAL // SECURE</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

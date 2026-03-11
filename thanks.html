@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Received | Salvador Yakubu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="subpage">
+
+<nav class="glass-nav">
+    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
+        <span class="logo-signature">SALVADOR YAKUBU</span>
+    </div> 
+</nav>
+
+<main class="container" style="display: flex; align-items: center; justify-content: center; min-height: 85vh; text-align: center;">
+    <div class="thanks-card" style="max-width: 500px; padding: 60px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 24px; backdrop-filter: blur(10px);">
+        
+        <div class="status-indicator" style="margin: 0 auto 30px; width: 12px; height: 12px; background: #10b981; border-radius: 50%; box-shadow: 0 0 20px #10b981; animation: pulse 2s infinite;"></div>
+        
+        <div class="badge" style="margin-bottom: 20px; letter-spacing: 1px;">ENCRYPTED_TRANSMISSION</div>
+        <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Inquiry <span class="gradient-text">Received.</span></h1>
+        
+        <p style="margin: 0 0 40px; color: #94a3b8; line-height: 1.8; font-size: 1.05rem;">
+            Your message has been transmitted successfully. I will review the details and respond via email shortly.
+        </p>
+        
+        <button class="btn-primary" onclick="window.location.href='index.html'" style="width: 100%; padding: 18px; font-weight: 600;">Return to Dashboard</button>
+    </div>
+</main>
+
+<footer style="position: fixed; bottom: 0; width: 100%;">
+    <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-top: 1px solid var(--border); background: rgba(10,10,10,0.8);">
+        <p style="font-size: 0.75rem; color: #64748b; letter-spacing: 1px;">&copy; 2026 SALVADOR YAKUBU</p>
+        <div class="system-status" style="display: flex; align-items: center; gap: 10px;">
+            <span style="width: 6px; height: 6px; background: #10b981; border-radius: 50%;"></span>
+            <span style="font-family: monospace; font-size: 0.7rem; color: #10b981; letter-spacing: 2px;">SIGNAL_SECURE // 200_OK</span>
+        </div>
+    </div>
+</footer>
+
+<style>
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+</style>
+
+</body>
+</html>
