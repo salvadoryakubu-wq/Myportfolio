@@ -1,141 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Salvador Yakubu</title>
-    
-    <meta name="title" content="Salvador Yakubu | Projects">
-    <meta name="description" content="A collection of AI prototypes, security tools, and automated trading algorithms.">
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Projects by Salvador Yakubu | AI Tools, Cybersecurity & Education — Nigeria</title>
+    <meta name="title" content="Projects by Salvador Yakubu | AI Tools, Cybersecurity & Education — Nigeria">
+    <meta name="description" content="Technical projects by Salvador Yakubu — AI prototypes, SMC trading algorithms, cybersecurity tools, and founder of Learn and Study Forum (learnandstudyforum.com.ng), an educational website for JAMB and university students in Nigeria.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://salvadoryakubu-wq.github.io/Myportfolio/projects.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salvadoryakubu-wq.github.io/Myportfolio/projects.html">
+    <meta property="og:title" content="Projects | Salvador Yakubu — AI, Cybersecurity & Education">
+    <meta property="og:description" content="AI prototypes, cybersecurity tools, automated trading algorithms, and Learn and Study Forum — by Salvador Yakubu, Kaduna, Nigeria.">
+    <meta property="og:image" content="https://salvadoryakubu-wq.github.io/Myportfolio/preview-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Salvador Yakubu">
+    <meta name="twitter:description" content="AI prototypes, cybersecurity tools, automated trading algorithms and Learn and Study Forum — Nigeria.">
+    <meta name="twitter:image" content="https://salvadoryakubu-wq.github.io/Myportfolio/preview-image.jpg">
+
+    <meta name="theme-color" content="#0b0f1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="subpage">
 
-<nav class="glass-nav">
-    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
-        <span class="logo-signature">SALVADOR YAKUBU</span>
-    </div> 
-    
-    <div class="nav-container">
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- ====== NAVIGATION ====== -->
+<nav class="glass-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Salvador Yakubu — Home">
+        <span class="logo-signature">Salvador Yakubu</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-container" id="nav-menu" aria-hidden="true">
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link active">Projects</a></li> 
+            <li><a href="projects.html" class="nav-link active">Projects</a></li>
             <li><a href="trading.html" class="nav-link">Trading</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<main class="container">
-    <header class="page-header">
-        <div class="badge">Development & Security</div>
-        <h1 style="font-size: 3.5rem;">Technical <span class="gradient-text">Deployments</span></h1>
-        <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">A collection of AI prototypes, security tools, and automated trading algorithms engineered for performance.</p>
+<!-- ====== MAIN ====== -->
+<main class="container" id="main-content">
+
+    <header class="page-header reveal">
+        <div class="badge">Development &amp; Security</div>
+        <h1 style="font-size:clamp(2rem, 5vw, 3.5rem);">Technical <span class="gradient-text">Deployments</span></h1>
+        <p style="color:#94a3b8; max-width:600px; margin:15px auto 0;">
+            A collection of AI prototypes, security tools, and automated trading algorithms engineered for performance.
+        </p>
     </header>
 
     <div class="projects-container">
-    
-        <section class="deployment-box" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: 24px; padding: 40px; margin-bottom: 80px; backdrop-filter: blur(10px);">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
-                <div style="flex: 1; min-width: 300px;">
-                    <span class="category" style="color: var(--primary); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px;">CORE_ASSET // AI_ENGINE</span>
-                    <h2 style="font-size: 2.2rem; margin: 10px 0;">Salvador AI Prototype <span class="gradient-text">v3.0</span></h2>
-                    <p style="color: #cbd5e1; margin-bottom: 25px; line-height: 1.6;">Standalone terminal environment featuring secure memory handling and task execution logic. Engineered in Python for low-latency terminal interaction.</p>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 30px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">
-                        <div style="color: #64748b;">[OS]: Win_x64</div>
-                        <div style="color: #64748b;">[VER]: 3.0.4_STABLE</div>
-                        <div style="color: #64748b;">[LANG]: Python 3.11</div>
-                        <div style="color: #10b981; font-weight: 700;">[STATUS]: Deployment Ready</div>
+
+        <!-- ====== PROJECT 1: SALVADOR AI ====== -->
+        <section class="deployment-box reveal" style="background:rgba(255,255,255,0.02); border:1px solid var(--border); border-radius:24px; padding:40px; backdrop-filter:blur(10px);" aria-label="Salvador AI Prototype v3.0">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:30px;">
+
+                <div style="flex:1; min-width:280px;">
+                    <span class="category">CORE_ASSET // AI_ENGINE</span>
+                    <h2 style="font-size:clamp(1.6rem, 3vw, 2.2rem); margin:10px 0;">
+                        Salvador AI Prototype <span class="gradient-text">v3.0</span>
+                    </h2>
+                    <p style="color:#cbd5e1; margin-bottom:25px; line-height:1.7;">
+                        Standalone terminal environment featuring secure memory handling and task execution logic. Engineered in Python for low-latency terminal interaction.
+                    </p>
+
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:30px; font-family:'JetBrains Mono', monospace; font-size:0.75rem;">
+                        <div style="color:#64748b;">[OS]: Win_x64</div>
+                        <div style="color:#64748b;">[VER]: 3.0.4_STABLE</div>
+                        <div style="color:#64748b;">[LANG]: Python 3.11</div>
+                        <div style="color:#10b981; font-weight:700;">[STATUS]: Deployment Ready</div>
                     </div>
 
-                    <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 15px; border-radius: 4px; margin-bottom: 30px;">
-                        <span style="color: #f59e0b; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px;">SYSTEM_ACCESS_KEY</span>
-                        <p style="margin: 5px 0 0; font-family: 'JetBrains Mono', monospace; color: #fff; font-size: 1.1rem; letter-spacing: 2px;">89805554</p>
+                    <div style="background:rgba(245,158,11,0.08); border-left:3px solid #f59e0b; padding:15px 18px; border-radius:4px; margin-bottom:30px;">
+                        <span style="color:#f59e0b; font-size:0.7rem; font-weight:800; letter-spacing:1px; text-transform:uppercase;">System Access Key</span>
+                        <p style="margin:5px 0 0; font-family:'JetBrains Mono', monospace; color:#fff; font-size:1.1rem; letter-spacing:4px;">89805554</p>
                     </div>
 
-                    <div style="display: flex; gap: 15px;">
-                        <a href="downloads/salvador-ai-v3.zip" download class="btn-primary" style="flex: 2; text-align: center; text-decoration: none;">Download Binary (.EXE)</a>
-                        <button class="btn-secondary" style="flex: 1;">Documentation</button>
+                    <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                        <a href="downloads/salvador-ai-v3.zip" download class="btn-primary" style="flex:2; text-align:center; min-width:160px;">
+                            Download Binary (.EXE)
+                        </a>
+                        <button class="btn-secondary" style="flex:1; min-width:120px;">Documentation</button>
                     </div>
                 </div>
 
-                <div class="terminal-mockup" style="flex: 1; min-width: 300px; background: #000; border-radius: 12px; border: 1px solid #334155; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-                    <div style="display: flex; gap: 6px; margin-bottom: 15px;">
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56;"></span>
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></span>
-                        <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></span>
+                <!-- Terminal Mockup -->
+                <div class="terminal-mockup" style="flex:1; min-width:280px; background:#000; border-radius:12px; border:1px solid #1e293b; padding:22px; font-family:'JetBrains Mono', monospace; font-size:0.8rem; box-shadow:0 20px 40px rgba(0,0,0,0.6);" aria-label="Terminal preview">
+                    <div style="display:flex; gap:6px; margin-bottom:16px;" aria-hidden="true">
+                        <span style="width:10px; height:10px; border-radius:50%; background:#ff5f56;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#ffbd2e;"></span>
+                        <span style="width:10px; height:10px; border-radius:50%; background:#27c93f;"></span>
                     </div>
-                    <div style="color: #10b981;">$ python3 salvador_ai.py</div>
-                    <div style="color: #fff;">[SYSTEM] Initializing secure protocols...</div>
-                    <div style="color: #fff;">[SYSTEM] Please enter access key:</div>
-                    <div style="color: #3b82f6;">********</div>
-                    <div style="color: #10b981;">[SUCCESS] Access Granted. Welcome, Salvador.</div>
-                    <div style="color: #64748b; margin-top: 10px;">> Running core_diagnostics... OK</div>
-                    <div style="color: #64748b;">> Scanning market_liquidity... OK</div>
+                    <div style="color:#10b981; line-height:2;">$ python3 salvador_ai.py</div>
+                    <div style="color:#94a3b8; line-height:2;">[SYSTEM] Initializing secure protocols...</div>
+                    <div style="color:#94a3b8; line-height:2;">[SYSTEM] Please enter access key:</div>
+                    <div style="color:#3b82f6; line-height:2; letter-spacing:4px;">••••••••</div>
+                    <div style="color:#10b981; line-height:2;">[SUCCESS] Access Granted. Welcome, Salvador.</div>
+                    <div style="color:#475569; margin-top:8px; line-height:2;">&gt; Running core_diagnostics... <span style="color:#10b981;">OK</span></div>
+                    <div style="color:#475569; line-height:2;">&gt; Scanning market_liquidity... <span style="color:#10b981;">OK</span></div>
+                    <div style="color:#475569; line-height:2;">&gt; Loading SMC_engine... <span style="color:#10b981;">OK</span></div>
                 </div>
+
             </div>
         </section>
 
-        <div class="project-detailed-card reversed">
+        <!-- ====== PROJECT 2: SMC LIQUIDITY TRACKER ====== -->
+        <div class="project-detailed-card reversed reveal" aria-label="SMC Liquidity Tracker">
             <div class="project-info">
                 <span class="category">Financial Engineering</span>
                 <h2>SMC Liquidity Tracker</h2>
-                <p>Proprietary algorithm identifying Market Structure Shifts (MSS) and Fair Value Gaps (FVG) specifically for XAUUSD and BTCUSD liquidity analysis.</p>
+                <p style="color:#94a3b8; line-height:1.7; margin:15px 0;">
+                    Proprietary algorithm identifying Market Structure Shifts (MSS) and Fair Value Gaps (FVG) specifically for XAUUSD and BTCUSD liquidity analysis.
+                </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Pandas</span>
                     <span class="tech-tag">Market API</span>
                 </div>
-                <button class="btn-secondary" onclick="window.location.href='trading.html'">View Chart Strategy</button>
+                <a href="trading.html" class="btn-secondary" style="margin-top:10px; display:inline-block;">View Chart Strategy →</a>
             </div>
             <div class="project-visual">
                 <div class="chart-preview-container">
-                    <div class="candle bull" style="height: 70%;"></div>
-                    <div class="candle bear" style="height: 50%;"></div>
-                    <div class="candle bear" style="height: 90%;"></div>
-                    <div class="candle bull" style="height: 60%;"></div>
+                    <div class="candle bull"  style="height:60%;"></div>
+                    <div class="candle bear"  style="height:40%;"></div>
+                    <div class="candle bull"  style="height:80%;"></div>
+                    <div class="candle bear"  style="height:55%;"></div>
+                    <div class="candle bull"  style="height:90%;"></div>
+                    <div class="candle bull"  style="height:70%;"></div>
+                    <div class="candle bear"  style="height:45%;"></div>
+                    <div class="candle bull"  style="height:85%;"></div>
                 </div>
             </div>
         </div>
 
-        <div class="project-detailed-card">
+        <!-- ====== PROJECT 3: BOOK ====== -->
+        <div class="project-detailed-card reveal reveal-delay-1" aria-label="Understanding Forex Trading — Book">
             <div class="project-info">
-                <span class="category">Author & Educator</span>
+                <span class="category">Author &amp; Educator</span>
                 <h2>Understanding Forex Trading</h2>
-                <p>Published in 2025, this comprehensive guide bridges the gap between retail trading psychology and institutional Smart Money Concepts.</p>
+                <p style="color:#94a3b8; line-height:1.7; margin:15px 0;">
+                    Published in 2025, this comprehensive guide bridges the gap between retail trading psychology and institutional Smart Money Concepts (SMC).
+                </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Publication</span>
                     <span class="tech-tag">Forex Strategy</span>
                     <span class="tech-tag">SMC</span>
                 </div>
-                <button class="btn-primary" onclick="window.open('https://selar.com/0017zf0a42', '_blank')">Purchase on Selar</button>
+                <a href="https://selar.com/0017zf0a42" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:10px; display:inline-block;">
+                    Purchase on Selar ↗
+                </a>
             </div>
             <div class="project-visual mockup-bg">
-                <div class="book-container">
-                    <div class="book-spine"></div>
+                <div class="book-container" style="perspective:1000px;">
+                    <div class="book-spine" style="position:relative; width:28px; height:180px; background:linear-gradient(180deg,#1e3a5f,#0f172a); border-radius:2px 0 0 2px; flex-shrink:0;"></div>
                     <div class="book-front">
-                        <div style="padding: 20px; color: #fff; font-weight: 800; font-size: 0.8rem; text-align: center;">UNDERSTANDING FOREX TRADING</div>
+                        <div style="padding:20px; color:#fff; font-weight:800; font-size:0.8rem; text-align:center; letter-spacing:1px; line-height:1.6;">
+                            UNDERSTANDING<br>FOREX TRADING<br>
+                            <span style="color:var(--primary); font-size:0.65rem; font-weight:500; letter-spacing:2px; margin-top:8px; display:block;">SALVADOR YAKUBU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== PROJECT 4: LEARN AND STUDY FORUM ====== -->
+        <div class="project-detailed-card reversed reveal reveal-delay-2" aria-label="Learn and Study Forum — Educational Website">
+            <div class="project-info">
+                <span class="category">Education &amp; Community</span>
+                <h2>Learn and Study Forum</h2>
+                <p style="color:#94a3b8; line-height:1.7; margin:15px 0;">
+                    Founded and built by Salvador Yakubu, <strong>Learn and Study Forum</strong> is a dedicated educational website for Nigerian JAMB candidates and university students. It provides study resources, past questions, academic guidance, and a community forum to help students succeed in their exams and academic careers.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Education</span>
+                    <span class="tech-tag">JAMB Prep</span>
+                    <span class="tech-tag">Nigeria</span>
+                    <span class="tech-tag">Web Platform</span>
+                </div>
+                <a href="https://learnandstudyforum.com.ng" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:10px; display:inline-block;">
+                    Visit learnandstudyforum.com.ng ↗
+                </a>
+            </div>
+            <div class="project-visual" style="background:linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(16,185,129,0.06) 100%); border-radius:16px; display:flex; align-items:center; justify-content:center; min-height:220px; padding:30px; border:1px solid var(--border);">
+                <div style="text-align:center;">
+                    <div style="font-size:3.5rem; margin-bottom:16px;">🎓</div>
+                    <div style="font-family:'JetBrains Mono', monospace; font-size:0.7rem; color:var(--primary); letter-spacing:2px; font-weight:700; margin-bottom:8px;">LEARN &amp; STUDY FORUM</div>
+                    <div style="font-size:0.8rem; color:#64748b;">learnandstudyforum.com.ng</div>
+                    <div style="margin-top:14px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+                        <span style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2); color:#93c5fd; padding:4px 10px; border-radius:20px; font-size:0.7rem;">JAMB</span>
+                        <span style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.2); color:#6ee7b7; padding:4px 10px; border-radius:20px; font-size:0.7rem;">University</span>
+                        <span style="background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.2); color:#c4b5fd; padding:4px 10px; border-radius:20px; font-size:0.7rem;">Nigeria</span>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+
 </main>
 
-<footer>
+<!-- ====== FOOTER ====== -->
+<footer role="contentinfo">
     <div class="footer-content">
-        <p>&copy; 2026 Salvador Yakubu. All rights reserved.</p>
-        <div class="system-status">
-            <span class="status-indicator"></span>
-            <span class="status-text" style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;">SYSTEM_OPERATIONAL // SECURE</span>
+        <p style="font-size:0.82rem; color:#64748b;">&copy; 2026 Salvador Yakubu. All rights reserved.</p>
+        <div class="system-status" aria-label="System status: operational">
+            <span class="status-indicator" aria-hidden="true"></span>
+            <span class="status-text" style="font-family:'JetBrains Mono', monospace;">SYSTEM_OPERATIONAL // SECURE</span>
         </div>
     </div>
 </footer>
 
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>

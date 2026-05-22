@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Desk | Salvador Yakubu</title>
-    
-    <meta name="title" content="Salvador Yakubu | Forex Strategy">
-    <meta name="description" content="Institutional analysis and Smart Money Concepts for XAUUSD and BTCUSD.">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Trading Desk | Salvador Yakubu — SMC Analyst, Kaduna Nigeria</title>
+    <meta name="title" content="Trading Desk | Salvador Yakubu — SMC Analyst, Kaduna Nigeria">
+    <meta name="description" content="Institutional market analysis by Salvador Yakubu — SMC Forex trader from Kaduna, Nigeria. Smart Money Concepts for XAUUSD and BTCUSD including liquidity sweeps, order blocks, and fair value gaps.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://salvadoryakubu-wq.github.io/Myportfolio/trading.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salvadoryakubu-wq.github.io/Myportfolio/trading.html">
+    <meta property="og:title" content="Trading Desk | Salvador Yakubu — SMC Analyst">
+    <meta property="og:description" content="Institutional analysis and Smart Money Concepts for XAUUSD and BTCUSD.">
+    <meta property="og:image" content="https://salvadoryakubu-wq.github.io/Myportfolio/preview-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trading Desk | Salvador Yakubu">
+    <meta name="twitter:description" content="Live institutional analysis — XAUUSD & BTCUSD.">
+    <meta name="twitter:image" content="https://salvadoryakubu-wq.github.io/Myportfolio/preview-image.jpg">
+
+    <meta name="theme-color" content="#0b0f1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="subpage">
 
-<nav class="glass-nav">
-    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
-        <span class="logo-signature">SALVADOR YAKUBU</span>
-    </div> 
-    
-    <div class="nav-container">
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- ====== NAVIGATION ====== -->
+<nav class="glass-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Salvador Yakubu — Home">
+        <span class="logo-signature">Salvador Yakubu</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-container" id="nav-menu" aria-hidden="true">
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="trading.html" class="nav-link active">Trading</a></li> <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="trading.html" class="nav-link active">Trading</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="ticker-wrap" style="border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2); width: 100%;">
+<!-- ====== TICKER TAPE ====== -->
+<div class="ticker-wrap" role="complementary" aria-label="Live market ticker">
     <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
@@ -37,7 +71,7 @@
           "symbols": [
             { "proName": "FOREXCOM:XAUUSD", "title": "GOLD" },
             { "proName": "BITSTAMP:BTCUSD", "title": "BITCOIN" },
-            { "proName": "FX_IDC:EURUSD", "title": "EUR/USD" },
+            { "proName": "FX_IDC:EURUSD",   "title": "EUR/USD" },
             { "proName": "BITSTAMP:ETHUSD", "title": "ETH/USD" }
           ],
           "showSymbolLogo": true,
@@ -50,79 +84,102 @@
     </div>
 </div>
 
-<main class="container" style="margin-top: 40px; padding-bottom: 100px;">
-    <header class="page-header" style="margin-bottom: 40px;">
+<!-- ====== MAIN ====== -->
+<main class="container" style="margin-top:40px; padding-bottom:100px;" id="main-content">
+
+    <header class="page-header reveal" style="margin-bottom:40px;">
         <div class="badge">Market Intelligence</div>
-        <h1 style="font-size: clamp(2rem, 5vw, 3rem);">Institutional <span class="gradient-text">Analysis</span></h1>
-        <p style="color: #94a3b8; max-width: 600px;">SMC Liquidity tracking for XAUUSD and BTCUSD.</p>
+        <h1 style="font-size:clamp(2rem, 5vw, 3rem);">
+            Institutional <span class="gradient-text">Analysis</span>
+        </h1>
+        <p style="color:#94a3b8; max-width:600px; margin:12px auto 0;">
+            SMC Liquidity tracking for XAUUSD and BTCUSD — powered by Market Structure Shifts, Order Blocks, and Fair Value Gaps.
+        </p>
     </header>
 
-    <div class="trading-content-wrapper" style="display: flex; flex-direction: column; gap: 30px;">
-        
-        <div class="chart-card" style="width: 100%; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
-            <div class="card-header" style="padding: 15px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-                <h3 style="font-size: 0.85rem; letter-spacing: 1px; color: var(--primary); margin: 0;">XAU/USD LIVE TERMINAL</h3>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                    <span class="status-dot" style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span>
-                    <span style="font-size: 0.65rem; color: #10b981; font-weight: 700;">LIVE</span>
+    <div class="trading-content-wrapper reveal" style="display:flex; flex-direction:column; gap:30px;">
+
+        <!-- LIVE CHART -->
+        <div class="chart-card" style="width:100%; background:rgba(255,255,255,0.02); border:1px solid var(--border); border-radius:20px; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,0.4);" aria-label="XAU/USD Live Chart">
+            <div class="card-header" style="padding:15px 22px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:0.82rem; letter-spacing:1.5px; color:var(--primary); margin:0; font-family:'JetBrains Mono', monospace;">XAU/USD LIVE TERMINAL</h3>
+                <div style="display:flex; align-items:center; gap:8px;" aria-label="Live indicator">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span style="font-size:0.65rem; color:#10b981; font-weight:700; letter-spacing:1px; font-family:'JetBrains Mono', monospace;">LIVE</span>
                 </div>
             </div>
-            <div id="tradingview_widget" style="height: 650px; width: 100%;"></div>
+            <!-- TradingView Widget -->
+            <div id="tradingview_widget" style="height:600px; width:100%;"></div>
         </div>
 
-        <div class="strategy-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; border: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: space-between;">
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Technical Edge</h3>
-                <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Core SMC confirmation pillars.</p>
+        <!-- STRATEGY CARD -->
+        <div class="strategy-card reveal" style="background:rgba(255,255,255,0.03); padding:32px; border-radius:20px; border:1px solid var(--border); display:flex; flex-wrap:wrap; gap:30px; align-items:center; justify-content:space-between;">
+            <div style="flex:1; min-width:180px;">
+                <h3 style="margin-bottom:8px; font-size:1.1rem;">Technical Edge</h3>
+                <p style="font-size:0.85rem; color:#64748b; margin:0;">Core SMC confirmation pillars used in every analysis.</p>
             </div>
-            
-            <ul class="strategy-list" style="flex: 3; list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
-                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #cbd5e1;">
-                    <span style="color: var(--primary); font-weight: 800;">01</span> Liquidity Sweeps
+
+            <ul style="flex:3; list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:20px;">
+                <li style="display:flex; align-items:center; gap:12px; font-size:0.88rem; color:#cbd5e1;">
+                    <span style="color:var(--primary); font-weight:800; font-family:'JetBrains Mono', monospace;">01</span> Liquidity Sweeps
                 </li>
-                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #cbd5e1;">
-                    <span style="color: var(--primary); font-weight: 800;">02</span> Order Blocks
+                <li style="display:flex; align-items:center; gap:12px; font-size:0.88rem; color:#cbd5e1;">
+                    <span style="color:var(--primary); font-weight:800; font-family:'JetBrains Mono', monospace;">02</span> Order Blocks
                 </li>
-                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #cbd5e1;">
-                    <span style="color: var(--primary); font-weight: 800;">03</span> FVG Gaps
+                <li style="display:flex; align-items:center; gap:12px; font-size:0.88rem; color:#cbd5e1;">
+                    <span style="color:var(--primary); font-weight:800; font-family:'JetBrains Mono', monospace;">03</span> FVG Gaps
                 </li>
-                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: #cbd5e1;">
-                    <span style="color: var(--primary); font-weight: 800;">04</span> MSS Shifts
+                <li style="display:flex; align-items:center; gap:12px; font-size:0.88rem; color:#cbd5e1;">
+                    <span style="color:var(--primary); font-weight:800; font-family:'JetBrains Mono', monospace;">04</span> MSS Shifts
                 </li>
             </ul>
 
-            <button class="btn-primary" style="flex: 1; min-width: 200px; padding: 15px;" onclick="window.location.href='contact.html'">Inquire about signals</button>
+            <a href="contact.html" class="btn-primary" style="flex:1; min-width:180px; padding:15px; text-align:center;">
+                Inquire About Signals
+            </a>
         </div>
+
+        <!-- DISCLAIMER -->
+        <p style="color:#475569; font-size:0.78rem; text-align:center; padding:0 10px; line-height:1.6;">
+            <strong style="color:#64748b;">Disclaimer:</strong> All analysis is for educational and informational purposes only. Past performance is not indicative of future results. Trading forex and cryptocurrencies involves significant risk of loss.
+        </p>
+
     </div>
 </main>
-<footer>
+
+<!-- ====== FOOTER ====== -->
+<footer role="contentinfo">
     <div class="footer-content">
-        <p>&copy; 2026 Salvador Yakubu. All rights reserved.</p>
-        <div class="system-status">
-            <span class="status-indicator"></span>
+        <p style="font-size:0.82rem; color:#64748b;">&copy; 2026 Salvador Yakubu. All rights reserved.</p>
+        <div class="system-status" aria-label="System status: operational">
+            <span class="status-indicator" aria-hidden="true"></span>
             <span class="status-text">SYSTEM_OPERATIONAL // SECURE</span>
         </div>
     </div>
 </footer>
 
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<!-- TradingView Chart Widget -->
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 <script type="text/javascript">
   new TradingView.widget({
-  "width": "100%",
-  "height": 550,
-  "symbol": "OANDA:XAUUSD",
-  "interval": "240",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_side_toolbar": false,
-  "allow_symbol_change": true,
-  "container_id": "tradingview_widget"
-});
+    "autosize": true,
+    "symbol": "OANDA:XAUUSD",
+    "interval": "240",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#0b0f1a",
+    "enable_publishing": false,
+    "hide_side_toolbar": false,
+    "allow_symbol_change": true,
+    "studies": ["RSI@tv-basicstudies"],
+    "container_id": "tradingview_widget"
+  });
 </script>
 
+<script src="script.js"></script>
 </body>
 </html>

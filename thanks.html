@@ -1,54 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Message Received | Salvador Yakubu</title>
+    <meta name="description" content="Your message has been received. Salvador Yakubu will respond shortly.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="theme-color" content="#0b0f1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes pulseGlow {
+            0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+            70%  { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        @keyframes checkIn {
+            from { transform: scale(0) rotate(-45deg); opacity: 0; }
+            to   { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .thanks-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.12);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 28px;
+            animation: pulseGlow 2.5s ease-in-out infinite;
+        }
+        .thanks-icon span {
+            animation: checkIn 0.5s cubic-bezier(0.2, 1, 0.3, 1) 0.2s both;
+        }
+
+        /* Auto-redirect countdown */
+        .countdown { font-family: 'JetBrains Mono', monospace; color: var(--primary); font-weight: 700; }
+    </style>
 </head>
 <body class="subpage">
 
-<nav class="glass-nav">
-    <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer">
-        <span class="logo-signature">SALVADOR YAKUBU</span>
-    </div> 
+<!-- ====== NAVIGATION ====== -->
+<nav class="glass-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Salvador Yakubu — Home">
+        <span class="logo-signature">Salvador Yakubu</span>
+    </a>
 </nav>
 
-<main class="container" style="display: flex; align-items: center; justify-content: center; min-height: 85vh; text-align: center;">
-    <div class="thanks-card" style="max-width: 500px; padding: 60px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 24px; backdrop-filter: blur(10px);">
-        
-        <div class="status-indicator" style="margin: 0 auto 30px; width: 12px; height: 12px; background: #10b981; border-radius: 50%; box-shadow: 0 0 20px #10b981; animation: pulse 2s infinite;"></div>
-        
-        <div class="badge" style="margin-bottom: 20px; letter-spacing: 1px;">ENCRYPTED_TRANSMISSION</div>
-        <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Inquiry <span class="gradient-text">Received.</span></h1>
-        
-        <p style="margin: 0 0 40px; color: #94a3b8; line-height: 1.8; font-size: 1.05rem;">
-            Your message has been transmitted successfully. I will review the details and respond via email shortly.
+<!-- ====== MAIN ====== -->
+<main style="display:flex; align-items:center; justify-content:center; min-height:85vh; padding:40px 20px;" id="main-content">
+    <div class="thanks-card reveal" style="max-width:480px; width:100%; padding:60px 50px; background:rgba(255,255,255,0.02); border:1px solid var(--border); border-radius:28px; backdrop-filter:blur(20px); text-align:center;">
+
+        <div class="thanks-icon" role="img" aria-label="Success checkmark">
+            <span aria-hidden="true">✓</span>
+        </div>
+
+        <div class="badge" style="margin-bottom:20px; letter-spacing:1px;">ENCRYPTED_TRANSMISSION</div>
+
+        <h1 style="font-size:2.4rem; margin-bottom:14px;">
+            Inquiry <span class="gradient-text">Received.</span>
+        </h1>
+
+        <p style="margin:0 0 12px; color:#94a3b8; line-height:1.8; font-size:1.02rem;">
+            Your message has been transmitted successfully. I will review the details and respond promptly.
         </p>
-        
-        <button class="btn-primary" onclick="window.location.href='index.html'" style="width: 100%; padding: 18px; font-weight: 600;">Return to Dashboard</button>
+
+        <p style="color:#475569; font-size:0.82rem; margin-bottom:40px; font-family:'JetBrains Mono', monospace;">
+            Redirecting in <span class="countdown" id="countdown">8</span>s...
+        </p>
+
+        <a href="index.html" class="btn-primary" style="width:100%; padding:18px; font-weight:700; text-align:center; display:block;">
+            Return to Dashboard
+        </a>
+
+        <div style="display:flex; gap:15px; margin-top:18px; justify-content:center;">
+            <a href="projects.html" class="btn-secondary" style="flex:1; text-align:center; padding:12px;">Projects</a>
+            <a href="trading.html" class="btn-secondary" style="flex:1; text-align:center; padding:12px;">Trading</a>
+        </div>
     </div>
 </main>
 
-<footer style="position: fixed; bottom: 0; width: 100%;">
-    <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-top: 1px solid var(--border); background: rgba(10,10,10,0.8);">
-        <p style="font-size: 0.75rem; color: #64748b; letter-spacing: 1px;">&copy; 2026 SALVADOR YAKUBU</p>
-        <div class="system-status" style="display: flex; align-items: center; gap: 10px;">
-            <span style="width: 6px; height: 6px; background: #10b981; border-radius: 50%;"></span>
-            <span style="font-family: monospace; font-size: 0.7rem; color: #10b981; letter-spacing: 2px;">SIGNAL_SECURE // 200_OK</span>
+<!-- ====== FOOTER ====== -->
+<footer style="position:fixed; bottom:0; width:100%; background:rgba(11,15,26,0.95); backdrop-filter:blur(10px);" role="contentinfo">
+    <div class="footer-content" style="padding:16px 8%;">
+        <p style="font-size:0.75rem; color:#64748b;">&copy; 2026 Salvador Yakubu</p>
+        <div class="system-status" aria-label="Status: secure">
+            <span style="width:6px; height:6px; background:#10b981; border-radius:50%; box-shadow:0 0 6px #10b981;" aria-hidden="true"></span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:0.68rem; color:#10b981; letter-spacing:2px;">SIGNAL_SECURE // 200_OK</span>
         </div>
     </div>
 </footer>
 
-<style>
-@keyframes pulse {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
-</style>
-
+<script src="script.js"></script>
+<script>
+    // Auto-redirect countdown
+    let seconds = 8;
+    const countdownEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+        seconds--;
+        if (countdownEl) countdownEl.textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(timer);
+            window.location.href = 'index.html';
+        }
+    }, 1000);
+</script>
 </body>
 </html>
